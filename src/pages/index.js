@@ -3,6 +3,7 @@ import theme from "../theme";
 import Card from "../components/";
 
 const Index = () => {
+  console.log({ theme });
   return (
     <ThemeProvider theme={theme}>
       <Card />
