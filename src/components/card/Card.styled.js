@@ -4,7 +4,6 @@ const CardStyled = styled.div`
   ${({ theme }) => css`
     position: relative;
     display: block;
-    max-width: 300px;
     width: 100%;
     border-radius: ${theme.layout.border_radius};
     border: 1px solid ${theme.colors.primary};
