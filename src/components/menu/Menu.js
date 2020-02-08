@@ -31,9 +31,9 @@ const Menu = ({ className }) => {
         {menuIcon}
       </button>
       <div className={`menu ${showMenu ? "visible" : "hidden"}`} role="menu">
-        <button>Save</button>
-        <button>Edit</button>
-        <button>Preview</button>
+        <button className="menu__action">Save</button>
+        <button className="menu__action">Edit</button>
+        <button className="menu__action">Preview</button>
       </div>
     </MenuStyled>
   );
