@@ -7,7 +7,7 @@ const CardStyled = styled.div`
     max-width: 300px;
     width: 100%;
     border-radius: ${theme.layout.border_radius};
-    border: 1px solid #d2d7df;
+    border: 1px solid ${theme.colors.primary};
     .card__image {
       height: 12rem;
       img {
@@ -21,11 +21,13 @@ const CardStyled = styled.div`
     .card__content {
       padding: ${theme.layout.large}px ${theme.layout.medium}px;
       p {
+        color: ${theme.colors.black};
         font-size: ${theme.typography.p.size};
         line-height: ${theme.typography.p.line_height};
       }
     }
     .card__heading {
+      color: ${theme.colors.black};
       font-size: ${theme.typography.headings.h3.size};
       line-height: ${theme.typography.headings.h3.line_height};
       font-weight: normal;
