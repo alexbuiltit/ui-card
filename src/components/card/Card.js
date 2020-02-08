@@ -1,23 +1,32 @@
 import React from "react";
+import PropTypes from "prop-types";
 import CardStyled from "./Card.styled";
-import thumbnail from "./thumbnail.jpg";
-const Card = () => {
+import Menu from "../menu/Menu";
+const Card = ({ image, title, text }) => {
   return (
     <CardStyled>
-      <div className="card__image">
-        <img src={thumbnail} alt="Just an image" />
-      </div>
+      {image && (
+        <div className="card__image">
+          <img src={image} alt="Just an image" />
+        </div>
+      )}
       <div className="card__content">
-        <h3 className="card__heading">Card heading</h3>
+        {title && <h3 className="card__heading">{title}</h3>}
         <small>Last edited 2 days ago</small>
-        <p>
-          A card is a flexible and extensible content container. It includes a
-          wide variety of content, thumbnails, video, images, subheadings,
-          actions, and content.
-        </p>
+        {text && <p>{text}</p>}
+      </div>
+      <div className="card__actions">
+        {/* <div className="card__favourite">test</div> */}
+        <Menu className="card__menu" />
       </div>
     </CardStyled>
   );
+};
+
+Card.propTypes = {
+  image: PropTypes.string,
+  text: PropTypes.string,
+  title: PropTypes.string
 };
 
 export default Card;
