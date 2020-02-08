@@ -16,5 +16,9 @@ export const typography = {
       size: "20px",
       line_height: "28px"
     }
+  },
+  p: {
+    size: "14px",
+    line_height: "22px"
   }
 };

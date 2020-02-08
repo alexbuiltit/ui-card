@@ -1,6 +1,6 @@
 import { typography } from "./typography";
-import { spacing, baseSize } from "./layout";
+import { layout, baseSize } from "./layout";
 
-const theme = { baseSize, typography, spacing };
+const theme = { baseSize, typography, layout };
 
 export default theme;
