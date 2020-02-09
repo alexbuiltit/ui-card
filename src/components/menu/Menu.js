@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import MenuStyled from "./Menu.styled";
-import Button from "../button/Button";
+
 const menuIcon = (
   <svg
     viewBox="0 0 86 405"
@@ -16,7 +16,8 @@ const menuIcon = (
     />
   </svg>
 );
-const Menu = ({ className }) => {
+const Menu = ({ className, children }) => {
+  if (!children) return null;
   const [showMenu, setShowMenu] = useState(false);
   const handleMenuToggle = () => {
     setShowMenu(!showMenu);
@@ -32,15 +33,17 @@ const Menu = ({ className }) => {
         {menuIcon}
       </button>
       <div className={`menu ${showMenu ? "visible" : "hidden"}`} role="menu">
-        <Button label="Save" />
-        <Button label="Edit" />
-        <Button label="Preview" />
+        {children}
       </div>
     </MenuStyled>
   );
 };
 
 Menu.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired
 };
 export default Menu;
