@@ -20,15 +20,31 @@ storiesOf("Card", module)
       {story()}
     </ThemeProvider>
   ))
-  .add("Default", () => <Card title={cardContent.title} showMenu />)
+  .add("Default", () => <Card title={cardContent.title} />)
   .add("With image", () => (
+    <Card title={cardContent.title} image={cardContent.image} />
+  ))
+  .add("With text", () => (
     <Card
       title={cardContent.title}
       image={cardContent.image}
+      text={cardContent.text}
+    />
+  ))
+  .add("With menu", () => (
+    <Card
+      title={cardContent.title}
+      image={cardContent.image}
+      text={cardContent.text}
+      showMenu
+    />
+  ))
+  .add("With favourite", () => (
+    <Card
+      title={cardContent.title}
+      image={cardContent.image}
+      text={cardContent.text}
       showMenu
       showFav
     />
-  ))
-  .add("With text", () => (
-    <Card title={cardContent.title} text={cardContent.text} showMenu showFav />
   ));
