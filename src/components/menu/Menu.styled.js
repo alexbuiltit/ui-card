@@ -8,7 +8,9 @@ const MenuStyled = styled.div`
       border: 1px solid ${theme.colors.primary};
       padding: 8px 16px;
       background: transparent;
-      &:hover {
+      &:hover,
+      &:active,
+      &:focus {
         background: ${theme.colors.secondary};
         svg {
           path {
