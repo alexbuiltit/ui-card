@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
+import clickOutside from "../../helpers/clickOutside";
 import MenuStyled from "./Menu.styled";
 
 const menuIcon = (
@@ -19,11 +20,13 @@ const menuIcon = (
 const Menu = ({ className, children }) => {
   if (!children) return null;
   const [showMenu, setShowMenu] = useState(false);
+  const menuRef = useRef();
+  clickOutside(menuRef, () => setShowMenu(false));
   const handleMenuToggle = () => {
     setShowMenu(!showMenu);
   };
   return (
-    <MenuStyled className={className}>
+    <MenuStyled className={className} ref={menuRef}>
       <button
         className="menu__toggle"
         aria-haspopup="true"
