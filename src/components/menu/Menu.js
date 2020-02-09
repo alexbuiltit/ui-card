@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import MenuStyled from "./Menu.styled";
+import Button from "../button/Button";
 const menuIcon = (
   <svg
     viewBox="0 0 86 405"
@@ -31,9 +32,9 @@ const Menu = ({ className }) => {
         {menuIcon}
       </button>
       <div className={`menu ${showMenu ? "visible" : "hidden"}`} role="menu">
-        <button className="menu__action">Save</button>
-        <button className="menu__action">Edit</button>
-        <button className="menu__action">Preview</button>
+        <Button label="Save" />
+        <Button label="Edit" />
+        <Button label="Preview" />
       </div>
     </MenuStyled>
   );

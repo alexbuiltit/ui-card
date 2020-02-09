@@ -33,22 +33,10 @@ const MenuStyled = styled.div`
         margin-top: ${theme.baseSize}px;
         border: 1px solid ${theme.colors.primary};
       }
-      button {
+      .menu__toggle {
         padding: 8px 16px;
         background: transparent;
         border: none;
-      }
-    }
-    .menu__action {
-      color: ${theme.colors.black};
-      text-align: left;
-      font-size: 14px;
-      padding: 8px 16px;
-      background: transparent;
-      border: none;
-      &:hover {
-        background: ${theme.colors.secondary};
-        color: #fff;
       }
     }
   `}
