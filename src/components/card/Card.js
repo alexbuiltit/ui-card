@@ -5,19 +5,19 @@ import CardStyled from "./Card.styled";
 import Menu from "../menu/Menu";
 import Button from "../button/Button";
 import Favourite from "../favourite/Favourite";
-const Card = ({ image, title, text, showMenu, showFav }) => {
+const Card = ({ image, title, subTitle, text, showMenu, showFav }) => {
   return (
     <CardStyled>
       {image && (
         <div className="card__image">
-          <img src={image} alt="Just an image" />
+          <img src={image} alt="" />
         </div>
       )}
       <div className="card__content">
         {title && (
           <h3 className="card__heading">{truncateString(title, 30)}</h3>
         )}
-        <small>Last edited 2 days ago</small>
+        {subTitle && <small>{subTitle}</small>}
         {text && <p>{text}</p>}
       </div>
       {(showMenu || showFav) && (
@@ -40,6 +40,7 @@ Card.propTypes = {
   image: PropTypes.string,
   text: PropTypes.string,
   title: PropTypes.string,
+  subTitle: PropTypes.string,
   showMenu: PropTypes.bool,
   showFav: PropTypes.bool
 };

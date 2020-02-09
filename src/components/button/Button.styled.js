@@ -8,7 +8,8 @@ const ButtonStyled = styled.button`
     padding: 8px 16px;
     background: transparent;
     border: none;
-    &:hover {
+    &:hover,
+    &:focus {
       background: ${theme.colors.secondary};
       color: #fff;
     }

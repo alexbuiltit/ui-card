@@ -1,10 +1,12 @@
 # A versatile UI Card
 
+This repo has been created to showcase a versatile UI Card, there are stories for storybook and a small nextjs page that will show an individual card.
+
 ## Setup
 
-`npm i` will install appropriate node modules.
-`npm run storybook` will run storybook.
-`npm run dev` will run a nextjs web app with an example card component.
+- `npm i` will install appropriate node modules.
+- `npm run storybook` will run storybook.
+- `npm run dev` will run a nextjs web app with an example card component.
 
 ## Structure
 
