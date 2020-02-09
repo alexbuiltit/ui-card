@@ -4,7 +4,7 @@ const MenuStyled = styled.div`
   ${({ theme }) => css`
     position: relative;
     .menu__toggle {
-      border-radius: ${theme.layout.border_radius};
+      border-radius: 2px;
       border: 1px solid ${theme.colors.primary};
       padding: 8px 16px;
       background: transparent;

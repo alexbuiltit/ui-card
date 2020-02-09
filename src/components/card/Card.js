@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import CardStyled from "./Card.styled";
 import Menu from "../menu/Menu";
 import Button from "../button/Button";
+import Favourite from "../favourite/Favourite";
 const Card = ({ image, title, text, showMenu, showFav }) => {
   return (
     <CardStyled>
@@ -18,7 +19,7 @@ const Card = ({ image, title, text, showMenu, showFav }) => {
       </div>
       {(showMenu || showFav) && (
         <div className="card__actions">
-          {showFav && <div className="card__favourite">test</div>}
+          {showFav && <Favourite className="card__favourite" />}
           {showMenu && (
             <Menu className="card__menu">
               <Button label="Save" />

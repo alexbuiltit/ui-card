@@ -22,8 +22,13 @@ storiesOf("Card", module)
   ))
   .add("Default", () => <Card title={cardContent.title} showMenu />)
   .add("With image", () => (
-    <Card title={cardContent.title} image={cardContent.image} showMenu />
+    <Card
+      title={cardContent.title}
+      image={cardContent.image}
+      showMenu
+      showFav
+    />
   ))
   .add("With text", () => (
-    <Card title={cardContent.title} text={cardContent.text} showMenu />
+    <Card title={cardContent.title} text={cardContent.text} showMenu showFav />
   ));
