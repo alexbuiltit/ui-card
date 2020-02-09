@@ -20,20 +20,20 @@ storiesOf("Layouts", module)
     </ThemeProvider>
   ))
   .add("Two col", () => (
-    <Layout columns={2}>
+    <Layout>
       <Card title={cardContent.title} text={cardContent.text} />
       <Card title={cardContent.title} text={cardContent.text} />
     </Layout>
   ))
   .add("Three col", () => (
-    <Layout columns={3}>
+    <Layout>
       <Card title={cardContent.title} text={cardContent.text} />
       <Card title={cardContent.title} text={cardContent.text} />
       <Card title={cardContent.title} text={cardContent.text} />
     </Layout>
   ))
   .add("Four col", () => (
-    <Layout columns={4}>
+    <Layout>
       <Card title={cardContent.title} text={cardContent.text} />
       <Card title={cardContent.title} text={cardContent.text} />
       <Card title={cardContent.title} text={cardContent.text} />

@@ -24,7 +24,7 @@ const cardThreeContent = {
 const Index = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Layout columns={3}>
+      <Layout>
         <Card
           title={cardTwoContent.title}
           subTitle={cardTwoContent.subTitle}
