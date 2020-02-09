@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import CardStyled from "./Card.styled";
 import Menu from "../menu/Menu";
-const Card = ({ image, title, text }) => {
+const Card = ({ image, title, text, showMenu, showFav }) => {
   return (
     <CardStyled>
       {image && (
@@ -15,10 +15,12 @@ const Card = ({ image, title, text }) => {
         <small>Last edited 2 days ago</small>
         {text && <p>{text}</p>}
       </div>
-      <div className="card__actions">
-        {/* <div className="card__favourite">test</div> */}
-        <Menu className="card__menu" />
-      </div>
+      {(showMenu || showFav) && (
+        <div className="card__actions">
+          {showFav && <div className="card__favourite">test</div>}
+          {showMenu && <Menu className="card__menu" />}
+        </div>
+      )}
     </CardStyled>
   );
 };
@@ -26,7 +28,9 @@ const Card = ({ image, title, text }) => {
 Card.propTypes = {
   image: PropTypes.string,
   text: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
+  showMenu: PropTypes.bool,
+  showFav: PropTypes.bool
 };
 
 export default Card;

@@ -20,10 +20,10 @@ storiesOf("Card", module)
       {story()}
     </ThemeProvider>
   ))
-  .add("Default", () => <Card title={cardContent.title} />)
+  .add("Default", () => <Card title={cardContent.title} showMenu />)
   .add("With image", () => (
-    <Card title={cardContent.title} image={cardContent.image} />
+    <Card title={cardContent.title} image={cardContent.image} showMenu />
   ))
   .add("With text", () => (
-    <Card title={cardContent.title} text={cardContent.text} />
+    <Card title={cardContent.title} text={cardContent.text} showMenu />
   ));
