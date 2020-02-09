@@ -22,6 +22,7 @@ const starIcon = (
   </svg>
 );
 const Favourite = ({ className }) => {
+  //Using hooks to determine whether the star should be active or not
   const [active, setActive] = useState(false);
   return (
     <FavouriteStyled

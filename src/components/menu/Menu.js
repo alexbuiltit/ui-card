@@ -19,12 +19,16 @@ const menuIcon = (
 );
 const Menu = ({ className, children }) => {
   if (!children) return null;
+
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef();
+
   clickOutside(menuRef, () => setShowMenu(false));
+
   const handleMenuToggle = () => {
     setShowMenu(!showMenu);
   };
+
   return (
     <MenuStyled className={className} ref={menuRef}>
       <button
