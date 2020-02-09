@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import truncateString from "../../helpers/truncateString";
 import CardStyled from "./Card.styled";
 import Menu from "../menu/Menu";
 import Button from "../button/Button";
@@ -13,7 +14,9 @@ const Card = ({ image, title, text, showMenu, showFav }) => {
         </div>
       )}
       <div className="card__content">
-        {title && <h3 className="card__heading">{title}</h3>}
+        {title && (
+          <h3 className="card__heading">{truncateString(title, 30)}</h3>
+        )}
         <small>Last edited 2 days ago</small>
         {text && <p>{text}</p>}
       </div>

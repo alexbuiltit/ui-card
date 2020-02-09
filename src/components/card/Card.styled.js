@@ -3,8 +3,6 @@ import styled, { css } from "styled-components";
 const CardStyled = styled.div`
   ${({ theme }) => css`
     position: relative;
-    display: block;
-    width: 100%;
     border-radius: ${theme.layout.border_radius};
     border: 1px solid ${theme.colors.primary};
     .card__image {
@@ -18,7 +16,7 @@ const CardStyled = styled.div`
       }
     }
     .card__content {
-      padding: ${theme.layout.large}px ${theme.layout.medium}px;
+      padding: ${theme.layout.medium}px;
       p {
         color: ${theme.colors.black};
         font-size: ${theme.typography.p.size};
@@ -37,7 +35,7 @@ const CardStyled = styled.div`
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      padding: ${theme.layout.medium}px;
+      padding: 0 ${theme.layout.medium}px ${theme.layout.medium}px;
     }
     .card__menu {
       justify-self: flex-end;
