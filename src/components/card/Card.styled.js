@@ -28,7 +28,7 @@ const CardStyled = styled.div`
       font-size: ${theme.typography.headings.h3.size};
       line-height: ${theme.typography.headings.h3.line_height};
       font-weight: normal;
-      letter-layout: -0.25px;
+      letter-spacing: -0.25px;
       margin: 0;
     }
     .card__actions {

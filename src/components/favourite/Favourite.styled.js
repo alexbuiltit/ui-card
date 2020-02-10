@@ -12,7 +12,7 @@ const FavouriteStyled = styled.button`
       }
     }
     svg {
-      width: 16px;
+      width: ${theme.layout.small}px;
       height: auto;
     }
   `}

@@ -6,7 +6,7 @@ const MenuStyled = styled.div`
     .menu__toggle {
       border-radius: 2px;
       border: 1px solid ${theme.colors.primary};
-      padding: 8px 16px;
+      padding: ${theme.layout.tiny}px ${theme.layout.small}px;
       background: transparent;
       &:hover,
       &:active,
@@ -14,7 +14,7 @@ const MenuStyled = styled.div`
         background: ${theme.colors.secondary};
         svg {
           path {
-            fill: #fff;
+            fill: ${theme.colors.white};
           }
         }
       }
@@ -27,7 +27,7 @@ const MenuStyled = styled.div`
       position: absolute;
       right: 0;
       display: none;
-      background-color: #fff;
+      background-color: ${theme.colors.white};
       width: 124px;
       &.visible {
         display: flex;
@@ -36,7 +36,7 @@ const MenuStyled = styled.div`
         border: 1px solid ${theme.colors.primary};
       }
       .menu__toggle {
-        padding: 8px 16px;
+        padding: ${theme.layout.tiny}px ${theme.layout.small}px;
         background: transparent;
         border: none;
       }

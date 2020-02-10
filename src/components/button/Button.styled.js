@@ -4,14 +4,14 @@ const ButtonStyled = styled.button`
   ${({ theme }) => css`
     color: ${theme.colors.black};
     text-align: left;
-    font-size: 14px;
-    padding: 8px 16px;
+    font-size: ${theme.typography.p.size};
+    padding: ${theme.layout.tiny}px ${theme.layout.small}px;
     background: transparent;
     border: none;
     &:hover,
     &:focus {
       background: ${theme.colors.secondary};
-      color: #fff;
+      color: ${theme.colors.white};
     }
   `}
 `;
