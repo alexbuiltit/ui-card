@@ -29,6 +29,7 @@ const Favourite = ({ className }) => {
       className={`${className} ${active ? "active" : "inactive"}`}
       onClick={() => setActive(!active)}
     >
+      <span className="vh">Favourite</span>
       {starIcon}
     </FavouriteStyled>
   );

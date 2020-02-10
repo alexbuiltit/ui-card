@@ -37,6 +37,7 @@ const Menu = ({ className, children }) => {
         aria-expanded={showMenu}
         onClick={() => handleMenuToggle()}
       >
+        <span className="vh">Menu</span>
         {menuIcon}
       </button>
       <div className={`menu ${showMenu ? "visible" : "hidden"}`} role="menu">

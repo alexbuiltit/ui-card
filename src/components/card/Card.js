@@ -18,7 +18,7 @@ const Card = ({ image, title, subTitle, text, showMenu, showFav }) => {
       <div className="card__content">
         {title && (
           // The title gets truncated to 30 characters
-          <h3 className="card__heading">{truncateString(title, 30)}</h3>
+          <h3 className="card__heading">{truncateString(title, 50)}</h3>
         )}
         {subTitle && <small>{subTitle}</small>}
         {text && <p>{text}</p>}
@@ -41,11 +41,17 @@ const Card = ({ image, title, subTitle, text, showMenu, showFav }) => {
 };
 
 Card.propTypes = {
+  //image is passed through as a string
   image: PropTypes.string,
-  text: PropTypes.string,
+  //title is passed through as a string
   title: PropTypes.string,
+  //text is passed through as a string
+  text: PropTypes.string,
+  //subTitle is passed through as a string
   subTitle: PropTypes.string,
+  //showMenu is a boolean, will only show the menu if set to true
   showMenu: PropTypes.bool,
+  //showFav is a boolean, will only show the Favourite icon if set to true
   showFav: PropTypes.bool
 };
 
