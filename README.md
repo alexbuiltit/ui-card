@@ -16,7 +16,7 @@ All components are inside `src/components`, they all have their own folder to ke
 
     - `ComponentName.js`: This is the component file
     - `ComponentName.styled.js`: This is the file that holds all the styles for the component, I have extracted the styles from the component file to make it easy to read.
-    - `ComponentName.stories.js`: These are storybook files, they will generate stories that can bee seen when you `npm run storybook`
+    - `ComponentName.stories.js`: These are storybook files, they will generate stories that can be seen when you `npm run storybook`
 
 ### Helpers
 
@@ -24,4 +24,4 @@ There are a couple of helpers that have been created in `src/helpers`, at the mo
 
 ### Theme
 
-I have created a theme object that uses styled-components `ThemeProvider` to allow my components access these values. This makes it easier to scale the application and introduce new components without repeating styles. There is also a global styles file which would have css resets etc in on a larger project.
+I have created a theme object that uses styled-components `ThemeProvider` to allow my components access these values. This makes it easier to scale the application and introduce new components without repeating styles. There is also a global styles file which would have CSS resets etc in on a larger project.
