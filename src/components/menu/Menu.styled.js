@@ -12,6 +12,7 @@ const MenuStyled = styled.div`
       &:active,
       &:focus {
         background: ${theme.colors.secondary};
+        border: 1px solid ${theme.colors.blue_light};
         svg {
           path {
             fill: ${theme.colors.white};

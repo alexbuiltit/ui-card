@@ -1,23 +1,13 @@
 export const typography = {
-  headings: {
-    h1: {
-      size: "40px",
-      line_height: "48px"
-    },
-    h2: {
-      size: "32px",
-      line_height: "40px"
-    },
-    h3: {
-      size: "24px",
-      line_height: "32px"
-    },
-    h4: {
-      size: "20px",
-      line_height: "28px"
-    }
+  large: {
+    size: "24px",
+    line_height: "32px"
   },
-  p: {
+  medium: {
+    size: "16px",
+    line_height: "24px"
+  },
+  small: {
     size: "14px",
     line_height: "22px"
   }

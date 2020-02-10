@@ -4,7 +4,7 @@ const ButtonStyled = styled.button`
   ${({ theme }) => css`
     color: ${theme.colors.black};
     text-align: left;
-    font-size: ${theme.typography.p.size};
+    font-size: ${theme.typography.small.size};
     padding: ${theme.layout.tiny}px ${theme.layout.small}px;
     background: transparent;
     border: none;

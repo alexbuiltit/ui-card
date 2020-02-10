@@ -19,17 +19,18 @@ const CardStyled = styled.div`
       padding: ${theme.layout.medium}px;
       p {
         color: ${theme.colors.black};
-        font-size: ${theme.typography.p.size};
-        line-height: ${theme.typography.p.line_height};
+        font-size: ${theme.typography.small.size};
+        line-height: ${theme.typography.small.line_height};
       }
     }
     .card__heading {
       color: ${theme.colors.black};
-      font-size: ${theme.typography.headings.h3.size};
-      line-height: ${theme.typography.headings.h3.line_height};
+      font-size: ${theme.typography.large.size};
+      line-height: ${theme.typography.large.line_height};
       font-weight: normal;
       letter-spacing: -0.25px;
       margin: 0;
+      margin-bottom: ${theme.layout.medium}px;
     }
     .card__actions {
       display: flex;
@@ -42,6 +43,10 @@ const CardStyled = styled.div`
     }
     .card__favourite {
       margin-right: auto;
+    }
+    small {
+      font-size: ${theme.typography.small.size};
+      line-height: ${theme.typography.small.line_height};
     }
   `}
 `;
