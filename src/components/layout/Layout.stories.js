@@ -12,31 +12,28 @@ const cardContent = {
     "A card is a flexible and extensible content container. It includes a wide variety of content, thumbnails, video, images, subheadings, actions, and content."
 };
 
-storiesOf("Layouts", module)
-  .addDecorator(story => (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      {story()}
-    </ThemeProvider>
-  ))
-  .add("Two col", () => (
-    <Layout>
-      <Card title={cardContent.title} text={cardContent.text} />
-      <Card title={cardContent.title} text={cardContent.text} />
-    </Layout>
-  ))
-  .add("Three col", () => (
-    <Layout>
-      <Card title={cardContent.title} text={cardContent.text} />
-      <Card title={cardContent.title} text={cardContent.text} />
-      <Card title={cardContent.title} text={cardContent.text} />
-    </Layout>
-  ))
-  .add("Four col", () => (
-    <Layout>
-      <Card title={cardContent.title} text={cardContent.text} />
-      <Card title={cardContent.title} text={cardContent.text} />
-      <Card title={cardContent.title} text={cardContent.text} />
-      <Card title={cardContent.title} text={cardContent.text} />
-    </Layout>
-  ));
+export default {
+  title: "Layouts"
+};
+
+export const twoCol = () => (
+  <Layout>
+    <Card title={cardContent.title} text={cardContent.text} />
+    <Card title={cardContent.title} text={cardContent.text} />
+  </Layout>
+);
+export const threeCol = () => (
+  <Layout>
+    <Card title={cardContent.title} text={cardContent.text} />
+    <Card title={cardContent.title} text={cardContent.text} />
+    <Card title={cardContent.title} text={cardContent.text} />
+  </Layout>
+);
+export const fourCol = () => (
+  <Layout>
+    <Card title={cardContent.title} text={cardContent.text} />
+    <Card title={cardContent.title} text={cardContent.text} />
+    <Card title={cardContent.title} text={cardContent.text} />
+    <Card title={cardContent.title} text={cardContent.text} />
+  </Layout>
+);
